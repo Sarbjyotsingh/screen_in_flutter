@@ -29,4 +29,9 @@ flutter:
        - asset: fonts/Lato-Regular.ttf
        - asset: fonts/Lato-Bold.ttf
          weight: 900
+    - family: Lato
+      fonts:
+        - asset: fonts/CustomIcon.ttf
+
+
 

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:screen_in_flutter/custom_icon_icons.dart';
 
 class ContactPage extends StatefulWidget {
   @override
@@ -17,22 +18,18 @@ class _ContactPageState extends State<ContactPage> {
           centerTitle: true,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          items: [
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.print),
               title: Text('Network'),
+              icon: Icon(CustomIcon.icon_4),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.print),
-              title: Text('Network'),
+              icon: Icon(CustomIcon.icon_3),
+              title: Text('Messages'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.print),
-              title: Text('Network'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.print),
-              title: Text('Network'),
+              icon: Icon(CustomIcon.icon_2),
+              title: Text('Contact'),
             ),
           ],
           backgroundColor: Colors.black,
