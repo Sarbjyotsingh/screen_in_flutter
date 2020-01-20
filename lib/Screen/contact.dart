@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_in_flutter/custom_icon_icons.dart';
+import 'package:screen_in_flutter/custom_icon.dart';
 
 class ContactPage extends StatefulWidget {
   @override
@@ -18,21 +18,34 @@ class _ContactPageState extends State<ContactPage> {
           centerTitle: true,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
+          items: [
             BottomNavigationBarItem(
+              icon: Tab(
+                icon: CustomIcon.icon4,
+              ),
               title: Text('Network'),
-              icon: Icon(CustomIcon.icon_4),
             ),
             BottomNavigationBarItem(
-              icon: Icon(CustomIcon.icon_3),
+              icon: Tab(
+                icon: CustomIcon.icon3,
+              ),
               title: Text('Messages'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(CustomIcon.icon_2),
+              icon: Tab(
+                icon: CustomIcon.icon2,
+              ),
               title: Text('Contact'),
             ),
+            BottomNavigationBarItem(
+              icon: Tab(
+                icon: CustomIcon.icon1,
+              ),
+              title: Text('Library'),
+            ),
           ],
-          backgroundColor: Colors.black,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.grey[900],
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -48,7 +61,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: <Widget>[
                     Text(
@@ -62,7 +75,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.all(15.0),
                 width: double.infinity,
                 child: RaisedButton(
                   child: Padding(
@@ -83,7 +96,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: <Widget>[
                     Text(
@@ -110,7 +123,7 @@ class _ContactPageState extends State<ContactPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    padding: const EdgeInsets.all(25.0),
+                    padding: const EdgeInsets.all(10.0),
                     width: double.infinity,
                     child: RaisedButton(
                       child: Padding(
@@ -131,13 +144,13 @@ class _ContactPageState extends State<ContactPage> {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.all(25.0),
+                    padding: const EdgeInsets.all(10.0),
                     width: double.infinity,
                     child: RaisedButton(
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Text(
-                          'BEGIN OT1 PROCESS',
+                          'ADJUST FIELD MODE SETTING',
                           style: TextStyle(
                               fontSize: 14.0,
                               fontFamily: 'Lato',
@@ -151,6 +164,9 @@ class _ContactPageState extends State<ContactPage> {
                       ),
                       onPressed: () {},
                     ),
+                  ),
+                  SizedBox(
+                    height: 40,
                   ),
                 ],
               ),
